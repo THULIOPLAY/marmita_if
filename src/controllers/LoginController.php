@@ -34,7 +34,7 @@ class LoginController extends Controller {
 
             if($token){
                 $_SESSION['token'] = $token;
-                $this->redirect('/');
+                $this->redirect('/home');
 
             }else {
                 
@@ -72,7 +72,7 @@ class LoginController extends Controller {
                 $token = LoginHandler::addAdmin($nome, $email, $senha);
                 $_SESSION['token'] = $token;
 
-                $this->redirect('/');
+                $this->redirect('/home');
   
 
             }else{

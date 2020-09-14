@@ -3,7 +3,8 @@ use core\Router;
 
 $router = new Router();
 
-$router->get('/', 'HomeController@index');
+$router->get('/', 'UsuariosController@index');
+$router->get('/home', 'HomeController@home');
 $router->get('/login', 'LoginController@signin');
 $router->post('/login', 'LoginController@signinAction');
 

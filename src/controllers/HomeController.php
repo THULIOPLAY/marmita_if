@@ -7,6 +7,7 @@ use \src\handlers\LoginHandler;
 
 class HomeController extends Controller {
 
+    
     private $loggedUser;
 
 
@@ -14,19 +15,20 @@ class HomeController extends Controller {
         $this->loggedUser = LoginHandler::checkLogin();
         if ($this->loggedUser === false) {
             $this->redirect('/login');
-        }
+        } 
 
     }
 
-    public function index() {
+
+    public function home() {
         $hoje = date('Y-m-d');
         $usuarios =  Usuario::select()->where('data', $hoje)->execute();
 
         $this->render('home', [
             'usuarios' => $usuarios
         ]);
-    }
 
+    }
     public function pdf() {
         $hoje = date('Y-m-d');
         $usuarios =  Usuario::select()->where('data', $hoje)->execute();

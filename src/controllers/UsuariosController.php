@@ -9,6 +9,10 @@ class UsuariosController extends Controller {
 
     private $loggedUser;
 
+    public function index() {
+        $this->render('add');
+    }
+
     public function add() {
         $flash = '';
         if(!empty($_SESSION['flash'])){
