@@ -36,8 +36,8 @@
             <div class="logo-1"></div>  
            
 			<nav>
-				<a href="<?=$base;?>/novo" class="bt ">Agendamento</a>
-				<a href="<?=$base;?>/" class="bt col-y">Admin</a>
+				<a href="<?=$base;?>/" class="bt ">Agendamento</a>
+				<a href="<?=$base;?>/home" class="bt col-y">Admin</a>
 			</nav>
     
     </div>

@@ -9,6 +9,9 @@ class UsuariosController extends Controller {
 
     private $loggedUser;
 
+    public function index() {
+        $this->render('add');
+    }
     public function add() {
         $flash = '';
         if(!empty($_SESSION['flash'])){
@@ -86,7 +89,7 @@ class UsuariosController extends Controller {
                     ->where('id', $args['id'])
                 ->execute();
                 
-                $this->redirect('/');
+                $this->redirect('/home');
             } 
         }
         $this->redirect('/usuario/'.$args['id'].'/editar');
@@ -96,6 +99,6 @@ class UsuariosController extends Controller {
     public function del($args){
 
         Usuario::delete()->where('id', $args['id'])->execute();
-        $this->redirect('/');
+        $this->redirect('/home');
     }
 }

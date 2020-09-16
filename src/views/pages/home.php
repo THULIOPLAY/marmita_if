@@ -2,7 +2,7 @@
 
 <div class="container">
     <a class="bt" href="<?=$base;?>/novo">Marcar Horário</a>
-    <a class="bt col-g" href="<?=$base;?>/cadastrar">Novo Administrador</a>
+    <a class="bt col-g" href="<?=$base;?>/cadastrar">Novo Administrador</a> <br><br>
     <a class="bt col-y" href="<?=$base;?>/pdf" target="_blank">Imprimir Lista</a>
 
 </div>
