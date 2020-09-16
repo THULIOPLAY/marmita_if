@@ -20,7 +20,7 @@ class HomeController extends Controller {
     }
 
 
-    public function home() {
+    public function index() {
         $hoje = date('Y-m-d');
         $usuarios =  Usuario::select()->where('data', $hoje)->execute();
 

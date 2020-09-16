@@ -33,14 +33,16 @@
 <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-t-50 p-b-90">
-                <?php if (!empty($flash)):?>
-                    <h1><?php echo $flash ?></h1>
-                <?php endif; ?>
+
+
 				<form class="login100-form validate-form flex-sb flex-w" method="POST" action="<?=$base;?>/login">
 					<span class="login100-form-title p-b-51">
 						Login
 					</span>
 
+				<?php if (!empty($flash)):?>
+                    <h2 style="border: 2px solid #0b8b50; color: #0b8b50; font-weight: bold; margin: 5px;"><?php echo $flash ?></h2>
+                <?php endif; ?>
 					
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
 						<input class="input100" type="email" name="email" placeholder="Email">
@@ -55,11 +57,6 @@
 					
 					<div class="flex-sb-m w-full p-t-3 p-b-24">
 
-						<div>
-							<a href="<?=$base;?>/cadastrar" class="txt1">
-								Cadastrar Novo Admin
-							</a>
-						</div>
 					</div>
 
 					<div class="container-login100-form-btn m-t-17">

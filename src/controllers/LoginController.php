@@ -34,7 +34,7 @@ class LoginController extends Controller {
 
             if($token){
                 $_SESSION['token'] = $token;
-                $this->redirect('/home');
+                $this->redirect('/');
 
             }else {
                 

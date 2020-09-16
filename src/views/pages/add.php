@@ -1,4 +1,10 @@
 <?php $render('header'); ?>
+<?php $agora = date('H:i');?>
+<?php $date = date('Y/m/d');?>
+<?php $data_amanha = date ('Y/m/d', strtotime('+1 day'));?>
+
+
+
 
 <section class="cover-form">
         <div class="container bg">
@@ -7,8 +13,17 @@
                 <?php if (!empty($flash)):?>
                     <h2 style="border: 2px solid #0b8b50; color: #0b8b50; font-weight: bold; margin: 5px;"><?php echo $flash ?></h2>
                 <?php endif; ?>
+                
+                <h2>Agendamento para Marmita </h2>
+                
+                <?php if ( $agora < '08:30'):?>
+                    <h2 style="border: 2px solid rgb(0, 113, 206); color: rgb(0, 113, 206); font-weight: bold; margin: 5px;">Agendamento para: <?php echo $date; ?> </h2>
+                <?php elseif( $agora > '13:30'): ?>
+                    <h2 style="border: 2px solid rgb(0, 113, 206); color: rgb(0, 113, 206); font-weight: bold; margin: 5px;">Agendamento para: <?php echo $data_amanha; ?> </h2>
+                <?php elseif( $agora > '08:30' && $agora < '13:30'): ?>
+                    <h2 style="border: 2px solid rgb(255, 189, 9); color: rgb(255, 189, 9); font-weight: bold; margin: 5px;">Agendamento Bloqueado!  </h2>
+                <?php endif;?>
 
-                <h2>Novo Agendamento para Marmita</h2>
                 <form method="POST" action="<?=$base;?>/novo">
                     <div class="form-wrape">
                         <p>*Nome:</p>
@@ -33,11 +48,21 @@
                         <input type="date" name="data" required>
                     </div>
 
-                    <div class="form-wrape">
-                        <input class="bt" type="submit" value="Marcar">
-                    </div>
+                    <?php if ( $agora > '08:30' && $agora < '20:30'):?>
+                        <br>
+                        <h2 style="border: 2px solid rgb(255, 9, 50); color: rgb(255, 9, 50); font-weight: bold; margin: 5px;">Horário excedido: <?php echo $agora; ?> </h2>                
+                        <div class="form-wrape">
+                            <input style="color: rgb(255, 9, 50);" class="bt" type="submit" id="submit" value="INDISPONÍVEL" disabled>
+                        </div>
+                    <?php else: ?>
+                        <br>
+                        <div class="form-wrape">
+                            <input class="bt" type="submit" id="submit" value="Marcar ">
+                        </div>
+                    <?php endif;?>
 
-                    <div class="form-wrape">
+                    <div class="form-wrape" style="border: 2px solid #CCC;border-radius:3px; color: #CCC; font-weight: bold; padding: 5px">
+                    <p class="info">* Agendamento disponível das 13:30 as 08:30 horas </p>
                         <p class="info">* Campos Obrigatórios </p>
                     </div>
 

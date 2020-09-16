@@ -25,6 +25,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?=$base?>/assets/css/util.css">
 	<link rel="stylesheet" type="text/css" href="<?=$base?>/assets/css/main.css">
+	
     <title>Document</title>
 </head>
 
@@ -32,9 +33,13 @@
 
 <header>
     <div class="container">
-            <div class="logo-1"></div>  <!-- logo 1 -->
-            <h2>MARMITA: IF GOIANO RIO VERDE </h2>
-            <div class="clear"></div>
+            <div class="logo-1"></div>  
+           
+			<nav>
+				<a href="<?=$base;?>/novo" class="bt ">Agendamento</a>
+				<a href="<?=$base;?>/" class="bt col-y">Admin</a>
+			</nav>
+    
     </div>
 </header>
-    
+

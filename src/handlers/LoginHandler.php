@@ -13,7 +13,7 @@
 
                 $data = Admin::select()->where('token', $token)->one();
 
-                if (count($data) > 0) {
+                if ($data > 0) {
                     $loggedUser = new Admin();
                     $loggedUser->id = $data['id'];
                     $loggedUser->email = $data['email'];
