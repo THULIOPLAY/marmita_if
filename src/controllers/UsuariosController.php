@@ -49,14 +49,14 @@ class UsuariosController extends Controller {
                 'data' => $data,
             ])->execute();
 
-            $_SESSION['flash'] = 'SUA MARMITA JÁ ESTÁ GARANTIDA';
+            $_SESSION['flash'] = 'Agendamento confirmado!';
 
             $this->loggedUser = LoginHandler::checkLogin();
             if ($this->loggedUser === false) {
                 $this->redirect('/novo');
             }
 
-            $this->redirect('/');
+            $this->redirect('/novo');
     
         }
 

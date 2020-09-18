@@ -5,9 +5,9 @@
     <a class="bt col-g" href="<?=$base;?>/cadastrar">Novo Administrador</a> <br><br>
     <a class="bt col-y" href="<?=$base;?>/pdf" target="_blank">Imprimir Lista</a>
 
-</div>
 
-<div class="container">
+
+<div class=" table-responsive-sm">
     <table class="content-table" >
         <thead>
             <tr>
@@ -20,6 +20,18 @@
                         d = n.getDate();
                         document.getElementById("date").innerHTML = y + "/"  + m  + "/" + d;
                     </script>
+                </th>
+                <th>
+                    <a href="" class="bt "> 
+                    <img width="20" src="<?=$base;?>/assets/images/calendario.png"> <label id="date2"></label>
+                    <script>
+                        n =  new Date();
+                        y = n.getFullYear();
+                        m = n.getMonth() + 1;
+                        d = n.getDate() +1;
+                        document.getElementById("date2").innerHTML = y + "/"  + m  + "/" + d ;
+                    </script>
+                    </a>
                 </th>
         </tr>
         </thead>
@@ -53,8 +65,8 @@
         </tbody>
 
     </table>
-    </div>
-
+</div>
+</div>
     <div id="dropDownSelect1"></div>
     
     <div id="dropDownSelect1"></div>
