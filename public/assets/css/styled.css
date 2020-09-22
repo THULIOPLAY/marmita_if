@@ -32,11 +32,68 @@ body {
 header{
     /* background-color: rgb(184, 18, 68); */
     background-color:#0b8b50;
-    padding: 10px 2% 30px 2%;
+    padding: 20px 2%;
     margin-bottom: 30px;
 
 }
+nav.menu-mobile{
+	float: right;
+	width: 28px;
+	height: 28px;
+	margin-top:7px;
+	cursor: pointer;
+    background-image: url('../images/menu-mobile.png');
+	background-size:100% 100%;
+	display: none;
+}
 
+nav.menu-mobile ul{
+	/* display: none; */
+	z-index: 999;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 60px;
+    background-color: white;
+    color: black;
+}
+
+nav.menu-mobile ul li{
+	text-transform: uppercase;
+}
+
+nav.menu-mobile ul li{
+	padding:10px 0;
+}
+
+header nav.menu-desktop{
+	float: right;
+}
+
+header nav.menu-desktop ul{
+	padding:8px 0;
+	list-style-type: none;
+}
+
+header nav.menu-desktop ul li{
+	float: left;
+	font-size: 14px;
+	padding:0 20px;
+	text-transform: uppercase;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #FFFF;
+    font-weight: 600;
+}
+
+
+header nav a:hover{
+    text-decoration: none;
+    color: rgb(219, 219, 219);
+}
 footer{
         left: 0;
         bottom: 0;
@@ -426,7 +483,21 @@ section.chamada h3{
 	.item-2-mosaico{
 		text-align: justify;
 		width: 100%;
+    }
+    nav.menu-desktop{
+		display: none;
 	}
+
+	nav.menu-mobile{
+		display: block;
+    }
+    
+    header nav a{
+        text-decoration: none;
+        color: rgb(56, 56, 56);
+        font-weight: 600;
+    }
+    
 }
 
 @media screen and (max-width: 510px){

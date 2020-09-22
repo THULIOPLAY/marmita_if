@@ -35,11 +35,26 @@
     <div class="container">
             <div class="logo-1"></div>  
            
-			<nav>
-				<a href="<?=$base;?>/" class="bt ">Agendamento</a>
-				<a href="<?=$base;?>/home" class="bt col-y">Admin</a>
+			<nav class="menu-desktop">
+				<ul>
+					<li><a href="<?=$base;?>/"  >Agendamento</a></li>
+					<li><a href="<?=$base;?>/home" >Sobre</a></li>
+					<li><a href="<?=$base;?>/home" >Cardapio</a></li>
+					<li><a href="<?=$base;?>/home" >Admin</a></li>
+
+				</ul>
 			</nav>
-    
+
+			<nav class="menu-mobile">
+				<ul>
+					<li><a href="<?=$base;?>/"  >Agendamento</a></li>
+					<li><a href="<?=$base;?>/home" >Sobre</a></li>
+					<li><a href="<?=$base;?>/home" >Cardapio</a></li>
+					<li><a href="<?=$base;?>/home" >Admin</a></li>
+
+				</ul>
+			</nav>
+			<div class="clear"></div>
     </div>
 </header>
 
