@@ -1,8 +1,18 @@
 
 <footer>
-    <hr>
-        Desenvolvido por Thúlio Xavier
-    <hr>
+	<div class="container">
+		
+			<nav style="float: left; margin-top: 20px; ">
+				<ul>
+				<label>Social</label>
+					<li>Instagram:</li>
+					<li>asd</li>
+					<li>asd</li>
+				</ul>
+			</nav>
+		
+	</div>
+
 </footer>
 
 <!--===============================================================================================-->

@@ -47,7 +47,7 @@ foreach ($usuarios as $usuario):
 
 $mpdf=new mPDF(); 
 $mpdf->WriteHTML($html);
-$mpdf->Output($arquivo, 'I');
+$mpdf->Output($arquivo, 'D');
 
 ?>
 

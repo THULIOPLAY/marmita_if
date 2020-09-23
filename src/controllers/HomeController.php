@@ -29,9 +29,33 @@ class HomeController extends Controller {
         ]);
 
     }
+
+    public function date(){
+        $data = filter_input(INPUT_POST, 'listDate');
+        $usuarios =  Usuario::select()->where('data', $data)->execute();
+
+        $resposta = $_SESSION['flash'] = 'Agendamento do dia:'.$data;
+
+        $this->render('home', [
+            'data' => $data,
+            'resposta' => $resposta,
+            'usuarios' => $usuarios,
+        ]); 
+    }
+
+    
     public function pdf() {
         $hoje = date('Y-m-d');
         $usuarios =  Usuario::select()->where('data', $hoje)->execute();
+
+        $this->render('pdf', [
+            'usuarios' => $usuarios
+        ]);
+    }
+    
+    public function pdfDate() {
+        $data = filter_input(INPUT_POST, 'data_imp');
+        $usuarios =  Usuario::select()->where('data', $data)->execute();
 
         $this->render('pdf', [
             'usuarios' => $usuarios

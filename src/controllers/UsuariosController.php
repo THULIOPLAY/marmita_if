@@ -15,27 +15,33 @@ class UsuariosController extends Controller {
     }
     public function add() {
         $flash = '';
+        $error = '';
         if(!empty($_SESSION['flash'])){
             $flash = $_SESSION['flash'];
             $_SESSION['flash'] = '';
+        } elseif(!empty($_SESSION['error'])) {
+            $error = $_SESSION['error'];
+            $_SESSION['error'] = '';
         }
         $this->render('/add', [
             'flash' => $flash,
+            'error' => $error,
         ]);
     }
 
     public function addAction(){
+
         $name = filter_input(INPUT_POST, 'nome');
         $matricula = filter_input(INPUT_POST, 'matricula');
         $horario = filter_input(INPUT_POST, 'horario');
         $data = filter_input(INPUT_POST, 'data');
-
         
         if ($name && $matricula){
 
-             $use = Aluno::select()->where('codigo', $matricula)->execute();
-            
+            $use = Aluno::select()->where('codigo', $matricula)->execute();
+
             if(count($use) != 0 ){
+
                 Usuario::insert([
                     'nome' => $name,
                     'matricula' => $matricula,
@@ -49,19 +55,17 @@ class UsuariosController extends Controller {
                 if ($this->loggedUser === false) {
                     $this->redirect('/novo');
                 }
-
-                $_SESSION['flash'] = 'opaa! asd';
     
                 $this->redirect('/novo');
-
+                //////
             }
-            $_SESSION['flash'] = 'errrr';
-    
+            $_SESSION['error'] = 'Por favor, verifique seu Código!';
         }
 
         $this->redirect('/novo');
 
     }
+
 
     public function edit($args){
         $usuario = Usuario::select()->where('id', $args['id'])->one();

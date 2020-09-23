@@ -40,8 +40,8 @@
 			<nav class="menu-desktop">
 				<ul>
 					<li><a href="<?=$base;?>/"  >Agendamento</a></li>
-					<li><a href="<?=$base;?>/home" >Sobre</a></li>
-					<li><a href="<?=$base;?>/home" >Cardapio</a></li>
+					<!-- <li><a href="<?=$base;?>/sobre" >Sobre</a></li>
+					<li><a href="<?=$base;?>/home" >Cardapio</a></li> -->
 					<li><a href="<?=$base;?>/home" >Admin</a></li>
 
 				</ul>
@@ -51,8 +51,8 @@
 			<i class="fa fa-bars"></i>
 				<ul>
 					<li><a href="<?=$base;?>/"  >Agendamento</a></li>
-					<li><a href="<?=$base;?>/home" >Sobre</a></li>
-					<li><a href="<?=$base;?>/home" >Cardapio</a></li>
+					<!-- <li><a href="<?=$base;?>/sobre" >Sobre</a></li>
+					<li><a href="<?=$base;?>/home" >Cardapio</a></li> -->
 					<li><a href="<?=$base;?>/home" >Admin</a></li>
 
 				</ul>

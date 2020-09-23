@@ -4,22 +4,27 @@
 <?php $data_amanha = date ('Y/m/d', strtotime('+1 day'));?>
 
 
-
+<section class="container bg_h" >
+<h2 class="title_1">BOLSA ALIMENTACAO IF GOIANO</h2>
+<h2 class="title">Campus Rio Verde</h2>
+</section>
 
 <section class="cover-form">
         <div class="container bg">
             <div class="form-container">
 
                 <?php if (!empty($flash)):?>
-                    <h2 style="border: 2px solid #0b8b50; color: #0b8b50; font-weight: bold; margin: 5px;"><?php echo $flash ?></h2>
+                    <h2 style="border: 2px solid #0b8b50; color: #FFF; background: #0b8b50; font-weight: bold; margin: 5px;"><?php echo $flash ?></h2>
+                <?php elseif(!empty($error)): ?>
+                    <h2 style="border: 2px solid rgb(255, 9, 50); color: #FFF; background: rgb(255, 9, 50); font-weight: bold; margin: 5px;"><?php echo $error ?></h2>
                 <?php endif; ?>
                 
-                <h2>Agendamento para Marmita </h2>
-                
+                <h2 style="margin: 5px;">Agendamento para Marmita </h2>
+
                 <?php if ( $agora < '08:30'):?>
-                    <h2 style="border: 2px solid rgb(0, 113, 206); color: rgb(0, 113, 206); font-weight: bold; margin: 5px;">Agendamento para: <?php echo $date; ?> </h2>
+                    <h2 style="border: 2px solid rgb(0, 113, 206); background:rgb(0, 113, 206) ; color: #FFF; font-weight: bold; margin: 5px;">Agendamento para: <?php echo $date; ?> </h2>
                 <?php elseif( $agora > '13:30'): ?>
-                    <h2 style="border: 2px solid rgb(0, 113, 206); color: rgb(0, 113, 206); font-weight: bold; margin: 5px;">Agendamento para: <?php echo $data_amanha; ?> </h2>
+                    <h2 style="border: 2px solid rgb(0, 113, 206); background:rgb(0, 113, 206) ; color: #FFF; font-weight: bold; margin: 5px;">Agendamento para: <?php echo $data_amanha; ?> </h2>
                 <?php elseif( $agora > '08:30' && $agora < '13:30'): ?>
                     <h2 style="border: 2px solid rgb(255, 189, 9); color: rgb(255, 189, 9); font-weight: bold; margin: 5px;">Agendamento Bloqueado!  </h2>
                 <?php endif;?>
@@ -48,7 +53,7 @@
                         <input type="date" name="data" required>
                     </div>
 
-                    <?php if ( $agora > '08:30' && $agora < '20:30'):?>
+                    <?php if ( $agora > '08:30' && $agora < '13:30'):?>
                         <br>
                         <h2 style="border: 2px solid rgb(255, 9, 50); color: rgb(255, 9, 50); font-weight: bold; margin: 5px;">Horário excedido: <?php echo $agora; ?> </h2>                
                         <div class="form-wrape">
@@ -71,5 +76,9 @@
             </div>
         </div>
     </section>
-
+    <section class="container bg_h" >
+    <br>
+    <br>
+    <br>
+</section>
 <?php $render('footer'); ?>
