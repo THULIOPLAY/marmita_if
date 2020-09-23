@@ -38,25 +38,26 @@ header{
 }
 nav.menu-mobile{
 	float: right;
-	width: 28px;
-	height: 28px;
-	margin-top:7px;
-	cursor: pointer;
-    background-image: url('../images/menu-mobile.png');
-	background-size:100% 100%;
 	display: none;
 }
 
 nav.menu-mobile ul{
-	/* display: none; */
-	z-index: 999;
-	text-align: center;
-	width: 100%;
+	display: none;
+	z-index: 2;
 	position: absolute;
 	left: 0;
-	top: 60px;
-    background-color: white;
-    color: black;
+	width: 100%;
+	top: 89px;
+	background: rgb(29, 29, 29);
+	list-style-type: none;
+}
+
+nav.menu-mobile > i{
+	position: relative;
+	top: 23px;
+	cursor: pointer;
+	font-size: 25px;
+	color: white;
 }
 
 nav.menu-mobile ul li{
@@ -64,9 +65,16 @@ nav.menu-mobile ul li{
 }
 
 nav.menu-mobile ul li{
-	padding:10px 0;
-}
+	font-weight: lighter;
+	border-bottom: 1px solid #444;
+	text-align: center;
+	padding:8px 0;}
 
+nav.menu-mobile a{
+	display: block;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+}
 header nav.menu-desktop{
 	float: right;
 }
@@ -95,13 +103,13 @@ header nav a:hover{
     color: rgb(219, 219, 219);
 }
 footer{
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: #0b8b50;
-        color: white;
-        text-align: center;
-        margin-top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0b8b50;
+    color: white;
+    text-align: center;
+    margin-top: auto;
 }
 .logo-1{
     float: left;

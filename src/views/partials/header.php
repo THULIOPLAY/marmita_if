@@ -25,6 +25,8 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?=$base?>/assets/css/util.css">
 	<link rel="stylesheet" type="text/css" href="<?=$base?>/assets/css/main.css">
+	<link href="<?=$base?>/assets/css/font-awesome.min.css" rel="stylesheet" />
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Document</title>
 </head>
@@ -46,6 +48,7 @@
 			</nav>
 
 			<nav class="menu-mobile">
+			<i class="fa fa-bars"></i>
 				<ul>
 					<li><a href="<?=$base;?>/"  >Agendamento</a></li>
 					<li><a href="<?=$base;?>/home" >Sobre</a></li>

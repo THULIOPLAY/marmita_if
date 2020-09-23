@@ -3,6 +3,7 @@ namespace src\controllers;
 
 use \core\Controller;
 use \src\models\Usuario;
+use \src\models\Aluno;
 use \src\handlers\LoginHandler;
 
 class UsuariosController extends Controller {
@@ -31,36 +32,34 @@ class UsuariosController extends Controller {
 
         
         if ($name && $matricula){
-            // $data = Usuario::select()->where('matricula', $matricula)->execute();
+
+             $use = Aluno::select()->where('codigo', $matricula)->execute();
             
-            // if(count($data) === 0 ){
-            //     Usuario::insert([
-            //         'nome' => $name,
-            //         'matricula' => $matricula,
-            //     ])->execute();
-                
-            //     $this->redirect('/');
-            // }
+            if(count($use) != 0 ){
+                Usuario::insert([
+                    'nome' => $name,
+                    'matricula' => $matricula,
+                    'horario' => $horario,
+                    'data' => $data,
+                ])->execute();
+    
+                $_SESSION['flash'] = 'Agendamento confirmado!';
+    
+                $this->loggedUser = LoginHandler::checkLogin();
+                if ($this->loggedUser === false) {
+                    $this->redirect('/novo');
+                }
 
-            Usuario::insert([
-                'nome' => $name,
-                'matricula' => $matricula,
-                'horario' => $horario,
-                'data' => $data,
-            ])->execute();
-
-            $_SESSION['flash'] = 'Agendamento confirmado!';
-
-            $this->loggedUser = LoginHandler::checkLogin();
-            if ($this->loggedUser === false) {
+                $_SESSION['flash'] = 'opaa! asd';
+    
                 $this->redirect('/novo');
-            }
 
-            $this->redirect('/novo');
+            }
+            $_SESSION['flash'] = 'errrr';
     
         }
 
-        $this->redirect('/');
+        $this->redirect('/novo');
 
     }
 
