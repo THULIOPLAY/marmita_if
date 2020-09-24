@@ -1,16 +1,21 @@
 
 <footer>
 	<div class="container">
-		
-			<nav style="float: left; margin-top: 20px; ">
+		<br>
+	<p style="color: #FFF" >
+			Desenvolvido por 
+		<a href="https://www.instagram.com/thulio_xm/" target="_blank" style="color: #FFF">
+			@Thúlio Xavier
+		</a>
+	</p>
+			<!-- <nav style="float: left; margin-top: -20px">
 				<ul>
-				<label>Social</label>
+				<h2 class="title">Social</h2>
 					<li>Instagram:</li>
 					<li>asd</li>
 					<li>asd</li>
 				</ul>
-			</nav>
-		
+				</nav> -->
 	</div>
 
 </footer>

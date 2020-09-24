@@ -19,7 +19,7 @@
                     <h2 style="border: 2px solid rgb(255, 9, 50); color: #FFF; background: rgb(255, 9, 50); font-weight: bold; margin: 5px;"><?php echo $error ?></h2>
                 <?php endif; ?>
                 
-                <h2 style="margin: 5px;">Agendamento para Marmita </h2>
+                <h2 style="margin: 5px;">Novo Agendamento</h2>
 
                 <?php if ( $agora < '08:30'):?>
                     <h2 style="border: 2px solid rgb(0, 113, 206); background:rgb(0, 113, 206) ; color: #FFF; font-weight: bold; margin: 5px;">Agendamento para: <?php echo $date; ?> </h2>
