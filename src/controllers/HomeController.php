@@ -34,11 +34,11 @@ class HomeController extends Controller {
         $data = filter_input(INPUT_POST, 'listDate');
         $usuarios =  Usuario::select()->where('data', $data)->execute();
 
-        $resposta = $_SESSION['flash'] = 'Agendamento do dia:'.$data;
+        // $resposta = $_SESSION['flash'] = 'Agendamento do dia:'.$data;
 
         $this->render('home', [
             'data' => $data,
-            'resposta' => $resposta,
+            // 'resposta' => $resposta,
             'usuarios' => $usuarios,
         ]); 
     }

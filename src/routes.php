@@ -25,3 +25,10 @@ $router->post('/usuario/{id}/editar', 'UsuariosController@editAction');
 $router->get('/usuario/{id}/deletar', 'UsuariosController@del');
 
 $router->post('/date', 'HomeController@date');
+
+$router->get('/usuarios', 'AlunosController@indexUser');
+
+$router->get('/alunos/{id}/editar', 'AlunosController@edit');
+$router->post('/alunos/{id}/editar', 'AlunosController@editAction');
+
+$router->get('/aluno/{id}/deletar', 'AlunosController@del');

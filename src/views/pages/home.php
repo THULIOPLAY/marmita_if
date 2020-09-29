@@ -20,6 +20,7 @@
         <input type="submit" class="bt_info col-y" value="Imprimir" target="_black">
     </form>
     <?php endif;?>    
+
 <div class=" table-responsive-sm">
     <table class="content-table" >
         <thead>
@@ -66,6 +67,7 @@
         </tbody>
 
     </table>
+    
 </div>
 </div>
     <div id="dropDownSelect1"></div>

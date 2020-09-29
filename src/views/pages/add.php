@@ -77,8 +77,8 @@
         </div>
     </section>
     <section class="container bg_h" >
-    <br>
-    <br>
-    <br>
-</section>
+            <br>
+            <br>
+            <br>
+    </section>
 <?php $render('footer'); ?>
